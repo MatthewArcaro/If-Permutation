@@ -1,0 +1,19 @@
+ifRepeated = 0
+
+firstWord= input("Please provide me with the first word for the permutation check\n")
+secondWord= input("Please provide me with the second word for the permutation check\n")
+
+
+if len(firstWord) != len(secondWord):
+            print("These words are not the same length which means it cannot be a permutation")
+
+elif len(firstWord) == len(secondWord):
+    for x in range(len(firstWord)):
+        for j in range(len(secondWord)):
+            if secondWord[x] == firstWord[j]:
+                ifRepeated += 1
+    
+    if ifRepeated == len(firstWord) & len(secondWord):
+        print("Yes it is a permutation")
+    else:
+        print("it is not a permutation")    
